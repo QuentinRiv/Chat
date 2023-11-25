@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f4f7f6; /* Couleur de fond plus douce */
+  color: #444; /* Couleur du texte plus foncée pour un contraste doux */
+}
+
+#form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #e2e2e2; /* Ligne séparatrice subtile */
+}
+
+#input {
+  border: 2px solid #e2e2e2; /* Bordure plus visible */
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 20px; /* Bordures plus arrondies */
+  margin: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+#input:focus {
+  outline: none;
+  border-color: #a8dadc; /* Couleur de bordure accentuée lorsque l'input est focalisé */
+}
+
+#form > button {
+  background: #1d3557; /* Couleur de fond plus vive pour le bouton */
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour donner de la profondeur */
+}
+
+#form > button:hover {
+  background-color: #457b9d; /* Couleur lors du survol du bouton */
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 300px; /* Hauteur maximale avec défilement */
+  overflow-y: auto; /* Permet le défilement */
+}
+
+#messages > li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  background-color: #fff; /* Fond des messages */
+  border-radius: 15px; /* Bordures arrondies pour les messages */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+  max-width: 80%; /* Largeur maximale des messages */
+  word-wrap: break-word; /* Casse les mots pour éviter le débordement horizontal */
+}
+
+#messages > li:nth-child(odd) {
+  background: #a8dadc; /* Fond alterné pour les messages */
+}
+
+#messages > li.me {
+  background: #1d3557; /* Fond pour les messages de l'utilisateur */
+  color: #fff; /* Texte blanc pour les messages de l'utilisateur */
+}
+
+/* Ajout d'un peu d'espace en haut pour ne pas que le contenu soit caché par la barre de navigation */
+.container {
+  padding-top: 50px;
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh; /* Hauteur totale de la vue */
+}
+
+.user-list {
+  width: 30%; /* Largeur de la colonne des utilisateurs */
+  background-color: #f0f0f0; /* Couleur de fond de la liste des utilisateurs */
+  overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+  padding: 10px; /* Espacement intérieur */
+}
+
+.user {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: #c0c0c0;
+}
+
+.chat-content {
+  width: 70%; /* Largeur de la colonne de chat */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles existants pour #messages, #form, etc. */

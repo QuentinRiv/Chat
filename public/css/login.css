@@ -1,0 +1,160 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/back_login.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c93b8;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start; /* Aligner les boutons à gauche */
+    gap: 10px; /* Espacement entre les boutons */
+}
+
+/* Style initial du bouton */
+#signup-button {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+
+#login-button {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+
+/* Classe pour l'animation du fond vert */
+.signup-success {
+    color: transparent; /* Rendre le texte transparent */
+    animation: fillGreen 0.5s forwards;
+}
+
+/* Animation pour remplir le bouton de vert */
+@keyframes fillGreen {
+    0% {
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    100% {
+        background-color: green;
+        border-radius: 5px;
+    }
+}
+
+.validation-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    color: white; /* Définit la couleur du V en blanc */
+    font-size: 20px; /* Taille du V */
+    font-weight: bold; /* Rend le V en gras */
+}
+
+
+/* Classe pour faire apparaître le V */
+.show-validation {
+    opacity: 1;
+}
+
+/* Classe pour l'animation du fond rouge */
+.signup-failure {
+    color: transparent; /* Rendre le texte transparent */
+    animation: fillRed 0.5s forwards;
+}
+
+/* Classe pour l'animation du fond rouge */
+.login-failure {
+    color: transparent; /* Rendre le texte transparent */
+    animation: fillRed 0.5s forwards;
+}
+
+/* Animation pour remplir le bouton de rouge */
+@keyframes fillRed {
+    0% {
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    100% {
+        background-color: red;
+        border-radius: 5px;
+    }
+}
+
+/* Classe pour afficher le X de validation */
+.failure-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    color: white; /* Couleur du X */
+    font-size: 20px; /* Taille du X */
+    font-weight: bold; /* Rend le X en gras */
+}
+
+/* Classe pour faire apparaître le X */
+.show-failure {
+    opacity: 1;
+}
